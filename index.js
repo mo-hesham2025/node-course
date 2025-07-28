@@ -41,6 +41,10 @@ app.use(cors());
 
 // -------------------- Routes --------------------
 
+app.use("/",(req,res)=>{
+  res.status(200).json({massage:"server running"})
+})
+
 // Mount the user routes on the "/users" path
 app.use("/users", usersRouter);
 
